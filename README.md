@@ -42,3 +42,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+---
+
+ASQ:
+lat -33.871740
+long 151.092170
+
+Dennison
+lat -33.958870
+long 151.223360
+
+TCN
+lat -33.809020
+long 151.193460
