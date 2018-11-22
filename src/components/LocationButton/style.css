@@ -22,5 +22,5 @@
   justify-content: center;
   border: none;
   background-color: transparent;
-  filter: grayscale(0%);
+  filter: grayscale(0%) brightness(120%) saturate(130%);
 }

@@ -50,15 +50,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <div>
-          <button className="button-use-my-location" onClick={this.handleClick}>
-            Use my current location
-          </button>
-          {!!this.state.error && (
-            <div className="button-group-error">{this.state.error}</div>
-          )}
-        </div>
-        <div className="divider" />
         <div className="button-group-label">Select your location</div>
         <div className="button-group">
           <LocationButton
@@ -76,6 +67,15 @@ export default class Home extends React.Component {
             image={DEN}
             onClick={() => this.navigate("-33.958870", "151.223360")}
           />
+        </div>
+        <div className="divider" />
+        <div>
+          <button className="button-use-my-location" onClick={this.handleClick}>
+            Use my current location
+          </button>
+          {!!this.state.error && (
+            <div className="button-group-error">{this.state.error}</div>
+          )}
         </div>
       </div>
     );

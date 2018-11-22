@@ -27,6 +27,12 @@ export default class Results extends React.Component {
   }
 
   render() {
+    const {
+      match: {
+        params: { lon, lat }
+      }
+    } = this.props;
+
     return this.state.loading ? (
       <div className="results">
         <img className="results-loading" src={Loading} alt="loading" />
@@ -34,6 +40,7 @@ export default class Results extends React.Component {
       </div>
     ) : (
       <div className="results">
+        <div className="results-header">{`Coffee near lat ${lat}, long ${lon}`}</div>
         {[
           ...this.state.results,
           ...this.state.results,
