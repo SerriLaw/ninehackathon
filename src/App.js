@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./components/Header/index";
 import Home from "./containers/Home/index";
 import Results from "./containers/Results/index";
+import Border from "./components/Border/index";
 
 class App extends Component {
   render() {
@@ -19,6 +20,8 @@ class App extends Component {
           />
           <Route path="/search/lat/:lat/lon/:lon" component={Results} />
         </Switch>
+
+        <Border />
       </BrowserRouter>
     );
   }

@@ -11,7 +11,7 @@
   justify-content: center;
 
   background-color: transparent;
-  opacity: 0.6;
+  filter: grayscale(85%);
   border: none;
 }
 
@@ -22,8 +22,5 @@
   justify-content: center;
   border: none;
   background-color: transparent;
-  opacity: 1;
-}
-
-.location-text {
+  filter: grayscale(0%);
 }
