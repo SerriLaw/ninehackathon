@@ -12,12 +12,10 @@
   background-color: transparent;
   border-color: #999;
   border-width: 2px;
-  transition: all 0.2s ease-in-out;
 }
 
 .button-use-my-location:hover {
   background-color: #999;
-  transform: scale(1.2, 1.2);
 }
 
 .button-group-error {

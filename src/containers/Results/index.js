@@ -27,20 +27,19 @@ export default class Results extends React.Component {
   }
 
   render() {
-    const {
-      match: {
-        params: { lon, lat }
-      }
-    } = this.props;
     return this.state.loading ? (
       <div className="results">
-        <img className="results-loading" src={Loading} />
+        <img className="results-loading" src={Loading} alt="loading" />
         <p>loading...</p>
       </div>
     ) : (
       <div className="results">
-        {this.state.results.map(result => {
-          return <ResultsBlock result={result} />;
+        {[
+          ...this.state.results,
+          ...this.state.results,
+          ...this.state.results
+        ].map((result, index) => {
+          return <ResultsBlock result={result} key={index} />;
         })}
       </div>
     );

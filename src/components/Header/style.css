@@ -7,6 +7,18 @@
   justify-content: center;
 }
 
+.clicky {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.clicky:hover {
+  transform: scale(1.2, 1.2);
+}
+
 .pre,
 .post {
   display: inline-block;

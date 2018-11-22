@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../images/logo.png";
 import "./style.css";
@@ -6,11 +7,13 @@ import "./style.css";
 export default () => {
   return (
     <div className="header">
-      <p className="pre">caffe</p>
-      <div className="logo">
-        <img src={logo} alt="logo" height="50px" width="50px" />
-      </div>
-      <p className="post">ine</p>
+      <Link to="/" className="clicky">
+        <p className="pre">caffe</p>
+        <div className="logo">
+          <img src={logo} alt="logo" height="50px" width="50px" />
+        </div>
+        <p className="post">ine</p>
+      </Link>
     </div>
   );
 };
