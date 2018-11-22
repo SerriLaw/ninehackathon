@@ -1,6 +1,6 @@
 .header {
   background-color: #d3d6dd;
-  min-height: 15vh;
+  height: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
