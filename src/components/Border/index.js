@@ -9,8 +9,8 @@ export default () => {
       className="border"
       style={{
         backgroundImage: `url(${Border})`,
-        backgroundPosition: "center top",
-        backgroundRepeat: "repeat"
+        backgroundPosition: "center bottom",
+        backgroundRepeat: "repeat-x"
       }}
     />
   );

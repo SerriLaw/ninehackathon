@@ -10,6 +10,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <Border />
         <Header />
 
         <Switch>
@@ -20,8 +21,6 @@ class App extends Component {
           />
           <Route path="/search/lat/:lat/lon/:lon" component={Results} />
         </Switch>
-
-        <Border />
       </BrowserRouter>
     );
   }
