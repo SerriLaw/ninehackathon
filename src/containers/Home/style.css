@@ -11,10 +11,14 @@
   border-radius: 1vh;
 }
 
+.button-use-my-location:hover {
+  background-color: #f00;
+}
+
 .divider {
   height: 2px;
   width: 25%;
-  margin: 5vh 0 3vh 0;
+  margin: 5vh 0 5vh 0;
   background-color: #ccc;
 }
 
@@ -26,5 +30,5 @@
 }
 
 .button-group-label {
-  margin: 0 0 3vh 0;
+  margin: 0 0 8vh 0;
 }
