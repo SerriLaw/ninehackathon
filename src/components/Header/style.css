@@ -2,11 +2,31 @@
   background-color: #d3d6dd;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pre {
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  text-align: right;
+}
+.post {
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  text-align: left;
+}
+
 .logo {
-  width: 20vw;
+  display: inline-block;
 }

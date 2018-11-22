@@ -6,7 +6,13 @@ import "./style.css";
 export default () => {
   return (
     <div className="header">
-      <img src={logo} className="logo" alt="logo" />
+      <div className="container">
+        <p className="pre">caffe</p>
+        <div className="logo">
+          <img src={logo} alt="logo" height="50px" width="50px" />
+        </div>
+        <p className="post">ine</p>
+      </div>
     </div>
   );
 };
