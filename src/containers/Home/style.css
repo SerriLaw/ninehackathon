@@ -15,6 +15,10 @@
   background-color: #f00;
 }
 
+.button-group-error {
+  color: red;
+}
+
 .divider {
   height: 2px;
   width: 25%;

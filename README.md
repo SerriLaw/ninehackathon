@@ -56,3 +56,6 @@ long 151.223360
 TCN
 lat -33.809020
 long 151.193460
+
+COLORS
+brown #6F584B
