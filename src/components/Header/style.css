@@ -1,5 +1,5 @@
 .header {
-  background-color: #d3d6dd;
+  background-color: #22b1ff2c;
   min-height: 15vh;
   display: flex;
   flex-direction: row;
@@ -7,26 +7,18 @@
   justify-content: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.pre {
-  display: inline-block;
-  height: 100%;
-  margin: 0;
-  text-align: right;
-}
+.pre,
 .post {
   display: inline-block;
   height: 100%;
-  margin: 0;
+  margin: 0 0 10px 0;
   text-align: left;
+  color: #6f584b;
+  font-family: "Days One", sans-serif;
+  font-size: 6vh;
 }
 
 .logo {
   display: inline-block;
+  margin: 0 2px;
 }

@@ -12,7 +12,11 @@ class App extends Component {
         <Header />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={({ history }) => <Home context={history} />}
+          />
           <Route path="/search/lat/:lat/lon/:lon" component={Results} />
         </Switch>
       </BrowserRouter>

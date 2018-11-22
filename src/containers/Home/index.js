@@ -12,7 +12,6 @@ export default class Home extends React.Component {
     super(props);
 
     this.state = {
-      router: "",
       error: ""
     };
   }
@@ -44,7 +43,8 @@ export default class Home extends React.Component {
   };
 
   navigate = (lat, long) => {
-    console.log(lat, long);
+    const url = `/search/lat/${lat}/lon/${long}`;
+    this.props.context.push(url);
   };
 
   render() {

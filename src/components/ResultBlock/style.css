@@ -1,12 +1,8 @@
-.header {
-  background-color: #d3d6dd;
-  height: 1vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.result-block {
 }
 
-.logo {
-  width: 20vw;
+.result-name {
+}
+
+.result-address {
 }

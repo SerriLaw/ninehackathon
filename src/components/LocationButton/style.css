@@ -11,7 +11,9 @@
   justify-content: center;
 
   background-color: transparent;
+  opacity: 0.6;
   border: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .location-button:hover {
@@ -21,7 +23,8 @@
   justify-content: center;
   border: none;
   background-color: transparent;
-  opacity: 0.5;
+  opacity: 1;
+  transform: scale(1.2, 1.2);
 }
 
 .location-text {

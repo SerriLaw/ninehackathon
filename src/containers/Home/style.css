@@ -9,10 +9,15 @@
   margin: 10vh 0 0 0;
   padding: 2vh 5vw;
   border-radius: 1vh;
+  background-color: transparent;
+  border-color: #999;
+  border-width: 2px;
+  transition: all 0.2s ease-in-out;
 }
 
 .button-use-my-location:hover {
-  background-color: #f00;
+  background-color: #999;
+  transform: scale(1.2, 1.2);
 }
 
 .button-group-error {
@@ -23,7 +28,7 @@
   height: 2px;
   width: 25%;
   margin: 5vh 0 5vh 0;
-  background-color: #ccc;
+  background-color: #999;
 }
 
 .button-group {

@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
 
-export default props => {
+export default ({ result }) => {
+  console.log(result);
   return (
     <div className="result-block">
-      <div className="result-name">{props.name}</div>
-      <div className="result-address">{props.address}</div>
+      {/* <div className="result-name">{result.toS}</div>
+      <div className="result-address">{result.address}</div> */}
     </div>
   );
 };
