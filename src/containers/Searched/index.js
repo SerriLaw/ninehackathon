@@ -40,8 +40,8 @@ export default class Results extends React.Component {
       </div>
     ) : (
       <div className="searched">
-        <div className="searched-header">{`Searched for ${term}`}</div>
-        <ResultsBlock result={this.state.results} />;
+        <div className="searched-header">{`Searched for "${term}"`}</div>
+        <ResultsBlock result={this.state.results} />
       </div>
     );
   }

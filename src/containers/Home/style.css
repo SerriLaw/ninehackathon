@@ -5,26 +5,28 @@
   align-items: center;
 }
 
-.button-search {
-  padding: 2vh 5vw;
-  border-radius: 1vh;
-  background-color: transparent;
-  border-color: #999;
-  border-width: 2px;
-}
-
 .button-search,
 .button-use-my-location {
-  padding: 2vh 5vw;
+  padding: 1vh 1vw;
+  margin: 1vh 1vw;
   border-radius: 1vh;
-  background-color: transparent;
-  border-color: #999;
+  background-color: #0084cc22;
+  border-color: #0084cc66;
   border-width: 2px;
+  font-size: 2vh;
 }
-
-.button-search,
+.button-input {
+  padding: 1vh;
+  border-radius: 1vh;
+  border-width: 0;
+  height: 4vh;
+  width: 15vw;
+  margin: 1vh 1vw;
+  font-size: 2vh;
+}
+.button-search:hover,
 .button-use-my-location:hover {
-  background-color: #999;
+  background-color: #0084cc88;
 }
 
 .button-group-error {
@@ -34,8 +36,8 @@
 .divider {
   height: 2px;
   width: 25%;
-  margin: 5vh 0 5vh 0;
-  background-color: #999;
+  margin: 4vh 0;
+  background-color: #0084cc66;
 }
 
 .button-group {
@@ -46,5 +48,5 @@
 }
 
 .button-group-label {
-  margin: 0 0 8vh 0;
+  margin: 0 0 5vh 0;
 }

@@ -54,8 +54,8 @@ export default class Home extends React.Component {
     });
   }
 
-  navigate = (lat, long) => {
-    const url = `/search/lat/${lat}/lon/${long}`;
+  navigate = (lat, long, place) => {
+    const url = `/search/lat/${lat}/lon/${long}?place=${place}`;
     this.props.context.push(url);
   };
 
@@ -67,17 +67,23 @@ export default class Home extends React.Component {
           <LocationButton
             text="Australia Square"
             image={ASQ}
-            onClick={() => this.navigate("-33.864620", "151.207400")}
+            onClick={() =>
+              this.navigate("-33.864620", "151.207400", "Australia Square")
+            }
           />
           <LocationButton
             text="TCN Willoughby"
             image={TCN}
-            onClick={() => this.navigate("-33.809020", "151.193460")}
+            onClick={() =>
+              this.navigate("-33.8113398", "151.1967618", "TCN Willoughby")
+            }
           />
           <LocationButton
             text="Dennison Street"
             image={DEN}
-            onClick={() => this.navigate("-33.958870", "151.223360")}
+            onClick={() =>
+              this.navigate("-33.958870", "151.223360", "Dennison Street")
+            }
           />
         </div>
         <div className="divider" />

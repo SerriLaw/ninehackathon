@@ -5,6 +5,7 @@ import fetchData from "../../lib/fetch";
 import "./style.css";
 import Loading from "../../images/loading.gif";
 import ResultsBlock from "../../components/ResultBlock/index";
+import queryString from "query-string";
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -29,11 +30,15 @@ export default class Results extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const {
       match: {
         params: { lon, lat }
-      }
+      },
+      location: { search }
     } = this.props;
+
+    const values = queryString.parse(this.props.location.search);
 
     console.log(this.state.results);
 
@@ -44,10 +49,14 @@ export default class Results extends React.Component {
       </div>
     ) : (
       <div className="results">
-        <div className="results-header">{`Coffee near lat ${lat}, long ${lon}`}</div>
-        {this.state.results.map((result, index) => {
-          return <ResultsBlock result={result} key={index} />;
-        })}
+        <div className="results-header">
+          {!!values.place
+            ? `Coffee near ${values.place}`
+            : `Coffee near latitude ${lat}, longitude ${lon}`}
+        </div>
+        {this.state.results.map((result, index) => (
+          <ResultsBlock result={result} key={index} />
+        ))}
       </div>
     );
   }
