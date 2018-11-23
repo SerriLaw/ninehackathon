@@ -1,8 +1,8 @@
 const http = require("http");
 
-export default async (lat, lon) => {
+export default async term => {
   return new Promise((resolve, reject) => {
-    const url = `http://localhost:6789/analyse/?lon=${lon}&lat=${lat}`;
+    const url = `http://localhost:6789/analyse/${term}`;
 
     console.log(url);
     http.get(url, res => {

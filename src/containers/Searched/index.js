@@ -1,7 +1,7 @@
 import React from "react";
 import { sortBy, reverse } from "lodash";
 
-import fetchData from "../../lib/fetch";
+import fetchSpecific from "../../lib/fetchSpecific";
 import "./style.css";
 import Loading from "../../images/loading.gif";
 import ResultsBlock from "../../components/ResultBlock/index";
@@ -12,30 +12,27 @@ export default class Results extends React.Component {
 
     this.state = {
       loading: true,
-      results: []
+      results: {}
     };
   }
 
   async componentDidMount() {
     const {
       match: {
-        params: { lon, lat }
+        params: { term }
       }
     } = this.props;
 
-    const results = await fetchData(lat, lon);
-    const sortedResults = reverse(sortBy(results, x => x.starScore));
-    this.setState({ loading: false, results: sortedResults });
+    const results = await fetchSpecific(term);
+    this.setState({ loading: false, results });
   }
 
   render() {
     const {
       match: {
-        params: { lon, lat }
+        params: { term }
       }
     } = this.props;
-
-    console.log(this.state.results);
 
     return this.state.loading ? (
       <div className="results">
@@ -43,11 +40,9 @@ export default class Results extends React.Component {
         <p>loading...</p>
       </div>
     ) : (
-      <div className="results">
-        <div className="results-header">{`Coffee near lat ${lat}, long ${lon}`}</div>
-        {this.state.results.map((result, index) => {
-          return <ResultsBlock result={result} key={index} />;
-        })}
+      <div className="searched">
+        <div className="searched-header">{`Searched for ${term}`}</div>
+        <ResultsBlock result={this.state.results} />;
       </div>
     );
   }

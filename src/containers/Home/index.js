@@ -12,7 +12,8 @@ export default class Home extends React.Component {
     super(props);
 
     this.state = {
-      error: ""
+      error: "",
+      inputValue: ""
     };
   }
 
@@ -42,6 +43,17 @@ export default class Home extends React.Component {
     this.navigate(latitude, longitude);
   };
 
+  handleSearch = () => {
+    const url = `/find/${this.state.inputValue}`;
+    this.props.context.push(url);
+  };
+
+  updateInputValue(evt) {
+    this.setState({
+      inputValue: evt.target.value
+    });
+  }
+
   navigate = (lat, long) => {
     const url = `/search/lat/${lat}/lon/${long}`;
     this.props.context.push(url);
@@ -55,7 +67,7 @@ export default class Home extends React.Component {
           <LocationButton
             text="Australia Square"
             image={ASQ}
-            onClick={() => this.navigate("-33.871740", "151.092170")}
+            onClick={() => this.navigate("-33.864620", "151.207400")}
           />
           <LocationButton
             text="TCN Willoughby"
@@ -70,6 +82,15 @@ export default class Home extends React.Component {
         </div>
         <div className="divider" />
         <div>
+          <input
+            placeholder="Find a cafe"
+            className="button-input"
+            id="search"
+            onChange={evt => this.updateInputValue(evt)}
+          />
+          <button className="button-search" onClick={this.handleSearch}>
+            Search
+          </button>
           <button className="button-use-my-location" onClick={this.handleClick}>
             Use my current location
           </button>

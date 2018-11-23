@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+import Rating from "../Rating/index";
+
 export default ({ result }) => {
   console.log(result);
   return (
@@ -8,7 +10,7 @@ export default ({ result }) => {
       <div className="result-top-row">
         <div className="result-name">{result.poi.name}</div>
         <div className="result-divider" />
-        <div className="result-sentiment">{result.sentiment || "4"}</div>
+        <Rating rating={result.starScore} />
       </div>
 
       <div className="result-mid-row">

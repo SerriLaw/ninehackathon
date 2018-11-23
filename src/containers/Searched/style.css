@@ -1,0 +1,17 @@
+.results {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.results-header {
+  margin: 2vh 0 4vh 0;
+  width: 50vw;
+}
+
+.results-loading {
+  margin: 5vh 0 0 0;
+  height: 20vh;
+}
