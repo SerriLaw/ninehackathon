@@ -18,20 +18,13 @@ export default class Home extends React.Component {
   }
 
   handleClick = () => {
-    console.log("click");
-    if (!navigator.geolocation) {
-      this.handleError();
-    }
-    navigator.geolocation.getCurrentPosition(
-      this.handleSuccess,
-      this.handleError
-    );
+    this.navigate("-33.864620", "151.207400", "Australia Square");
   };
 
   handleError = () => {
     console.log("error");
     this.setState({
-      error: "Unable to use location, please select from below"
+      error: "Unable to use location, please select location"
     });
   };
 
