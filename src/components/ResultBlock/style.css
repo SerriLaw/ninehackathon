@@ -37,3 +37,17 @@
   flex: 1;
   border-bottom: 4px dotted #999;
 }
+
+.result-open-map {
+  color: #0084cc;
+  text-decoration: none;
+}
+
+.result-open-map:hover {
+  color: #0084cc88;
+  text-decoration: underline;
+}
+
+.result-distance {
+  text-align: right;
+}

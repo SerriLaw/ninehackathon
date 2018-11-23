@@ -31,9 +31,14 @@ export default ({ result }) => {
         </div>
 
         {!!result.dist && (
-          <div className="result-distance">{`${Math.round(
-            result.dist
-          )}m away`}</div>
+          <div>
+            <div className="result-distance">{`${Math.round(
+              result.dist
+            )}m away`}</div>
+            <a href="/" className="result-open-map">
+              Open in Google Maps
+            </a>
+          </div>
         )}
       </div>
     </div>
