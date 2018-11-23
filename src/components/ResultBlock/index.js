@@ -15,16 +15,26 @@ export default ({ result }) => {
 
       <div className="result-mid-row">
         <div className="result-mid-row-left">
-          <div className="result-address">{result.address.freeformAddress}</div>
-          <div className="result-phone">Ph: {result.poi.phone}</div>
-          <div className="result-categories">
-            {`Ambience: ${result.poi.categories.join(", ")}`}
-          </div>
+          {!!result.address && (
+            <div className="result-address">
+              {result.address.freeformAddress}
+            </div>
+          )}
+          {!!result.poi.phone && (
+            <div className="result-phone">Ph: {result.poi.phone}</div>
+          )}
+          {!!result.poi.categories && (
+            <div className="result-categories">
+              {`Ambience: ${result.poi.categories.join(", ")}`}
+            </div>
+          )}
         </div>
 
-        <div className="result-distance">{`${Math.round(
-          result.dist
-        )}m away`}</div>
+        {!!result.dist && (
+          <div className="result-distance">{`${Math.round(
+            result.dist
+          )}m away`}</div>
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import { sortBy, reverse } from "lodash";
 
 import fetchSpecific from "../../lib/fetchSpecific";
 import "./style.css";

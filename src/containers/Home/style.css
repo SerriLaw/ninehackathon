@@ -5,6 +5,15 @@
   align-items: center;
 }
 
+.button-search {
+  padding: 2vh 5vw;
+  border-radius: 1vh;
+  background-color: transparent;
+  border-color: #999;
+  border-width: 2px;
+}
+
+.button-search,
 .button-use-my-location {
   padding: 2vh 5vw;
   border-radius: 1vh;
@@ -13,6 +22,7 @@
   border-width: 2px;
 }
 
+.button-search,
 .button-use-my-location:hover {
   background-color: #999;
 }
